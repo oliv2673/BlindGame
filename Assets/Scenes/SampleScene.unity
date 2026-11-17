@@ -973,6 +973,94 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8210940501782348342, guid: 48202ecd4dd28c44db3f03dcf6e0e814, type: 3}
   m_PrefabInstance: {fileID: 1415951691892889126}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &904053255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1028395906594313717, guid: 1eb131aa4d9cb334099775736a6f7c9a, type: 3}
+  m_PrefabInstance: {fileID: 4079011744998573606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &904053261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904053255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59c3684b22f00604a97bb68037fcf4cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SteamAudioUnity::SteamAudio.SteamAudioSource
+  directBinaural: 1
+  interpolation: 0
+  perspectiveCorrection: 0
+  distanceAttenuation: 0
+  distanceAttenuationInput: 0
+  distanceAttenuationValue: 1
+  airAbsorption: 0
+  airAbsorptionInput: 0
+  airAbsorptionLow: 1
+  airAbsorptionMid: 1
+  airAbsorptionHigh: 1
+  directivity: 0
+  directivityInput: 0
+  dipoleWeight: 0
+  dipolePower: 0
+  directivityValue: 1
+  occlusion: 0
+  occlusionInput: 0
+  occlusionType: 0
+  occlusionRadius: 1
+  occlusionSamples: 16
+  occlusionValue: 1
+  transmission: 0
+  transmissionType: 0
+  transmissionInput: 0
+  transmissionLow: 1
+  transmissionMid: 1
+  transmissionHigh: 1
+  maxTransmissionSurfaces: 1
+  directMixLevel: 1
+  reflections: 0
+  reflectionsType: 0
+  useDistanceCurveForReflections: 0
+  currentBakedSource: {fileID: 0}
+  reverbTimeLow: 0
+  reverbTimeMid: 0
+  reverbTimeHigh: 0
+  hybridReverbEQLow: 1
+  hybridReverbEQMid: 1
+  hybridReverbEQHigh: 1
+  hybridReverbDelay: 0
+  applyHRTFToReflections: 0
+  reflectionsMixLevel: 1
+  pathing: 0
+  pathingProbeBatch: {fileID: 0}
+  pathValidation: 1
+  findAlternatePaths: 1
+  pathingEQ:
+  - 1
+  - 1
+  - 1
+  pathingSH:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  applyHRTFToPathing: 0
+  pathingMixLevel: 1
+  normalizePathingEQ: 0
 --- !u!1 &1201035822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 944883738563295494, guid: 48202ecd4dd28c44db3f03dcf6e0e814, type: 3}
@@ -1209,12 +1297,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7893985083624513045, guid: 1eb131aa4d9cb334099775736a6f7c9a, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7893985083624513045, guid: 1eb131aa4d9cb334099775736a6f7c9a, type: 3}
+      propertyPath: Spatialize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1028395906594313717, guid: 1eb131aa4d9cb334099775736a6f7c9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 904053261}
   m_SourcePrefab: {fileID: 100100000, guid: 1eb131aa4d9cb334099775736a6f7c9a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
