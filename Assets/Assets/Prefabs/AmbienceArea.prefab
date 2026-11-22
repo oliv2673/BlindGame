@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2312705348189974350}
   m_Layer: 0
-  m_Name: Forest
+  m_Name: AmbienceArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3931159455677796371}
   - component: {fileID: 4846775912975009902}
   m_Layer: 0
-  m_Name: Forest Sound
+  m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,13 +91,13 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: d3ea7a396a15dff45ba2c7b1196ff6dd, type: 3}
+  m_Resource: {fileID: 8300000, guid: a2726f2868df8094ba66cf14c98a989a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.332
   m_Pitch: 1
   Loop: 1
   Mute: 0
-  Spatialize: 0
+  Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 8308024501512860028}
   - component: {fileID: 6560423680303057532}
   m_Layer: 0
-  m_Name: Forest Area
+  m_Name: Audio Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

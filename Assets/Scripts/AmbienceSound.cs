@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class AmbienceSound : MonoBehaviour
@@ -5,12 +6,26 @@ public class AmbienceSound : MonoBehaviour
     public Collider Area;
     public GameObject Player;
 
+    void Start()
+    {
+        // Find the player if one hasn't been assigned
+        if (Player == null)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
+
+    }
+
     void Update()
     {
-        // Locate closest point on the collider to the player
+        // Make sure references exist
+        if (Player == null || Area == null)
+            return;
+
+        // Find closest point on collider to player
         Vector3 closestPoint = Area.ClosestPoint(Player.transform.position);
 
-        // Set position to closest point to the player
+        // Move ambience sound to that position
         transform.position = closestPoint;
     }
 }
