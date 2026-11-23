@@ -18,6 +18,12 @@ public class AmbienceSound : MonoBehaviour
 
     void Update()
     {
+        // Try to find the player if it hasn't been found yet
+        if (Player == null)
+        {
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
+
         // Make sure references exist
         if (Player == null || Area == null)
             return;
