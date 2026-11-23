@@ -6,9 +6,9 @@ public class ObjectPlacement : MonoBehaviour
     [Header("Train Prefabs")]
     public GameObject goodTrainPrefab;
     public GameObject[] badTrainPrefabs;
-
-    [Header("Middle Prefab")]
-    public GameObject trainMiddlePrefab;
+    
+    // [Header("Middle Prefab")]
+    // public GameObject trainMiddlePrefab;
 
     [Header("Spawn Settings")]
     public int spawnAmount = 8;
@@ -22,18 +22,19 @@ public class ObjectPlacement : MonoBehaviour
 
         // Calculate prefab lengths automatically
         float planeLength = GetLength(goodTrainPrefab);
-        float middleLength = GetLength(trainMiddlePrefab);
+        // float middleLength = GetLength(trainMiddlePrefab);
 
-        float totalLength = planeLength + middleLength;
+        // float totalLength = planeLength + middleLength;
+        float totalLength = planeLength;
 
         for (int i = 0; i < spawnAmount; i++)
         {
             // Spawn middle section
-            Vector3 middlePosition = transform.position +
-                transform.forward * (planeLength / 2f +
-                middleLength / 2f + totalLength * i);
+            //Vector3 middlePosition = transform.position +
+            //    transform.right * (planeLength / 2f +
+            //    middleLength / 2f + totalLength * i);
 
-            Instantiate(trainMiddlePrefab, middlePosition, transform.rotation);
+            //Instantiate(trainMiddlePrefab, middlePosition, transform.rotation);
 
             // Randomly choose good or bad train
             GameObject selectedTrain;
@@ -50,7 +51,7 @@ public class ObjectPlacement : MonoBehaviour
 
             // Spawn selected train
             Vector3 trainPosition = transform.position +
-                transform.forward * (totalLength * (i + 1));
+                transform.right * (totalLength * (i + 1));
 
             Instantiate(selectedTrain, trainPosition, transform.rotation);
         }
@@ -74,6 +75,6 @@ public class ObjectPlacement : MonoBehaviour
             bounds.Encapsulate(renderer.bounds);
         }
 
-        return bounds.size.z;
+        return bounds.size.x;
     }
 }
